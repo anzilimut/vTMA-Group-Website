@@ -1,0 +1,276 @@
+* {
+   font-family: 'Raleway', sans-serif;
+   box-sizing: border-box;
+   text-decoration: none;
+}
+/*Header*/
+
+.header{
+   min-height: 100vh;
+   width: 100%;
+   background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Img/imgHeader.png);
+   background-position: center;
+   background-size: cover;
+   position: relative;
+}
+
+/*Nav Bar*/
+nav {
+   position: fixed;
+   top: 0;
+   width: auto;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   min-height: 8vh;
+   background-color: transparent;
+   font-family: "Ubuntu", sans-serif;
+}
+
+.navbar-brand {
+   display: flex;
+   align-items: center;
+   position: absolute;
+   top: -5px;
+   left: 12px; /* Anpassen, um die gewünschte Position zu erreichen */
+   z-index: 1; /* Damit das Logo über dem Header liegt */
+   color: #fff; /* Textfarbe für das Logo anpassen */
+}
+
+.img-fluid{
+   width: 100px;
+   height: auto;
+   margin-left: 3vh;
+   flex: 1;
+}
+
+.nav-links {
+   display: flex;
+   justify-content: space-around;
+   width: 10%;
+   flex-direction: row;
+   align-items: center;
+}
+
+.nav-links li {
+   list-style: none;
+   margin: 10px 0;
+   text-align: center;
+   padding: 10px;
+}
+
+.nav-links a {
+   position: relative;
+   text-decoration: none;
+   color: rgb(226, 226, 226);
+   letter-spacing: 3px;
+   font-weight: bold;
+   font-size: 16px;
+   transition: color 0.3s ease;
+}
+
+.nav-links .live-map {
+   display: flex;
+   justify-content: center;
+}
+
+.nav-links .live-map a {
+   margin: 0 10px;
+}
+
+#navbar {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   transition: background-color 0.3s ease;
+   background-color: transparent;
+   z-index: 1000;
+}
+
+#navbar.scrolled {
+   background-color: #363635; /* Farbe ändern, wenn gescrollt wird */
+}
+
+.nav-links a::before,
+.nav-links a::after {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 2px;
+   bottom: 0;
+   background-color: #ed1c24;
+   transition: width 0.3s ease;
+}
+
+.nav-links a::before {
+   left: 0;
+}
+
+.nav-links a::after {
+   right: 0;
+}
+
+.nav-links a:hover::before {
+   width: 50%;
+}
+
+.nav-links a:hover::after {
+   width: 50%;
+}
+
+.nav-links a:hover {
+   color: #fff;
+}
+
+.burger {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   display: none;
+   cursor: pointer;
+}
+
+.burger div {
+   width: 25px;
+   height: 3px;
+   background-color: rgb(226, 226, 226);
+   margin: 5px;
+   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+   .nav-links {
+       width: 60%;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   body {
+       overflow-x: hidden;
+   }
+   
+   .nav-links {
+       position: fixed;
+       right: 0px;
+       height: 92vh;
+       top: 8vh;
+       background-color: transparent;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 50%;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in;
+   }
+   
+   .nav-links li {
+       opacity: 0;
+   }
+   
+   .burger {
+       display: block;
+       cursor: pointer;
+   }
+}
+
+.nav-active {
+       transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+   from {
+       opacity: 0;
+       transform: translateX(50px);
+   }
+   to {
+       opacity: 1;
+       transform: translateX(0);
+   }
+}
+
+.toggle .line1 {
+   transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+   opacity: 0;
+}
+
+.toggle .line3 {
+   transform: rotate(45deg) translate(-5px, -6px);
+}
+/*Navbar Underline*/
+
+/* Fügen Sie dieses CSS zu Ihrem Stylesheet hinzu */
+.navbar-underline {
+   height: 2px;
+   width: 100%;
+   background-color: #ed1c24; /* Rote Farbe anpassen */
+   position: fixed;
+   top: 11.725vh; /* Anpassen, um die gewünschte Position einzustellen */
+   z-index: 999;
+   transform: scaleX(0); /* Start mit einer Breite von 0 */
+   transform-origin: left;
+   transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+   .navbar-underline {
+       top: 7.98vh; /
+   }
+}
+
+#navbar.scrolled + .navbar-underline {
+   transform: scaleX(1); /* Ändern Sie die Breite auf 100%, wenn die Navbar gescrollt wird */
+}
+
+
+/*Main Body*/
+
+.main-body {
+   background-color: #fff;
+   padding: 20px;
+   text-align: center;
+}
+
+.topic {
+   border: 1px solid #ddd;
+   margin: 10px 0;
+   padding: 20px;
+   background-color: #f3f3f3;
+   display: flex;
+   flex-direction: column;
+}
+
+.topic .topic-content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+}
+
+.topic .topic-content.reversed {
+   flex-direction: row-reverse;
+}
+
+.topic .text-content, .topic .image-content {
+   flex: 1;
+   padding: 10px;
+   text-align: center;
+}
+
+.topic .image-content img {
+   max-width: 100%;
+   height: auto;
+   margin: 10px 0;
+}
+
+.topic h2 {
+   font-size: 24px;
+   color: #000;
+}
+
+.topic p {
+   font-size: 16px;
+   color: #666;
+}
