@@ -56,8 +56,8 @@
 }
 
 .header-button:hover {
-   background-color: #d7d6d6; /* Hintergrundfarbe bei Hover */
-   color: black; /* Textfarbe bei Hover */
+   background-color: #d7d6d6;
+   color: black;
 }
 
 /*Nav Bar*/
@@ -78,9 +78,9 @@ nav {
    align-items: center;
    position: absolute;
    top: -5px;
-   left: 12px; /* Anpassen, um die gewünschte Position zu erreichen */
-   z-index: 1; /* Damit das Logo über dem Header liegt */
-   color: #fff; /* Textfarbe für das Logo anpassen */
+   left: 12px;
+   z-index: 1;
+   color: #fff;
 }
 
 .img-fluid{
@@ -134,7 +134,7 @@ nav {
 }
 
 #navbar.scrolled {
-   background-color: #363635; /* Farbe ändern, wenn gescrollt wird */
+   background-color: #363635;
 }
 
 .nav-links a::before,
@@ -247,15 +247,15 @@ nav {
 }
 /*Navbar Underline*/
 
-/* Fügen Sie dieses CSS zu Ihrem Stylesheet hinzu */
+
 .navbar-underline {
    height: 2px;
    width: 100%;
-   background-color: #ed1c24; /* Rote Farbe anpassen */
+   background-color: #ed1c24;
    position: fixed;
-   top: 11.725vh; /* Anpassen, um die gewünschte Position einzustellen */
+   top: 11.725vh;
    z-index: 999;
-   transform: scaleX(0); /* Start mit einer Breite von 0 */
+   transform: scaleX(0);
    transform-origin: left;
    transition: transform 0.3s ease;
 }
@@ -267,56 +267,98 @@ nav {
 }
 
 #navbar.scrolled + .navbar-underline {
-   transform: scaleX(1); /* Ändern Sie die Breite auf 100%, wenn die Navbar gescrollt wird */
+   transform: scaleX(1);
 }
 
 
 /*Main Body*/
 
-.main-body {
-   background-color: #fff;
-   padding: 20px;
-   text-align: center;
+.container-fluid {
+   --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)*.5);
+    padding-left: calc(var(--bs-gutter-x)*.5);
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.topic {
-   border: 1px solid #ddd;
-   margin: 10px 0;
-   padding: 20px;
-   background-color: #f3f3f3;
+.row {
+   --bs-gutter-x: 1.5rem;
+   --bs-gutter-y: 0;
    display: flex;
-   flex-direction: column;
+   flex-wrap: wrap;
+   margin-top: calc(-1*var(--bs-gutter-y));
+   margin-right: calc(-.5*var(--bs-gutter-x));
+   margin-left: calc(-.5*var(--bs-gutter-x));
 }
 
-.topic .topic-content {
+.about-text-column {
    display: flex;
-   justify-content: space-between;
-   align-items: center;
-   flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.topic .topic-content.reversed {
-   flex-direction: row-reverse;
+.background-cl-grey {
+   background-color: #f8f9fa!important;
 }
 
-.topic .text-content, .topic .image-content {
-   flex: 1;
-   padding: 10px;
-   text-align: center;
+@media (min-width: 992px) {
+.column-lg {
+    flex: 0 0 auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 50%;
+   }
 }
 
-.topic .image-content img {
-   max-width: 100%;
-   height: auto;
-   margin: 10px 0;
+*, :after, :before {
+   box-sizing: border-box;
 }
 
-.topic h2 {
-   font-size: 24px;
-   color: #000;
+@media (min-width: 992px) {
+.about-text {
+    padding: 7rem;
+    max-width: 600px;
+   }
+}
+/*Text Subheader*/
+.spacing-sh {
+   letter-spacing: .5em!important;
 }
 
-.topic p {
-   font-size: 16px;
-   color: #666;
+.text-subheader-small {
+   text-transform: uppercase;
+}
+
+.m-text {
+   --bs-text-opacity: 1;
+   color: #868e96!important;
+}
+
+.text-subheader-small {
+   text-transform: uppercase!important;
+}
+
+.margin6 {
+   margin-bottom: .25rem!important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+   margin-top: 0;
+   margin-bottom: .5rem;
+   font-family: 'Raleway',sans-serif;
+   font-weight: 700;
+   line-height: 1.1;
+}
+
+h6 {
+   display: block;
+   font-size: 0.67em;
+   margin-block-start: 2.33em;
+   margin-block-end: 2.33em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+   font-weight: bold;
 }
