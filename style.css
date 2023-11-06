@@ -1,5 +1,5 @@
 * {
-   font-family: 'Raleway', sans-serif;
+   font-family: 'Hanken Grotesk', sans-serif;
    box-sizing: border-box;
    text-decoration: none;
 }
@@ -70,7 +70,7 @@ nav {
    align-items: center;
    min-height: 8vh;
    background-color: transparent;
-   font-family: "Ubuntu", sans-serif;
+   font-family: "Hanken Grotesk", sans-serif;
 }
 
 .navbar-brand {
@@ -253,7 +253,7 @@ nav {
    width: 100%;
    background-color: #ed1c24;
    position: fixed;
-   top: 11.725vh;
+   top: 12vh;
    z-index: 999;
    transform: scaleX(0);
    transform-origin: left;
@@ -299,12 +299,14 @@ nav {
 }
 
 .three-text {
-   font-size: 24px;
+   font-size: 38px;
    margin: 3px 0;
+   font-weight: 900;
 }
 
 img {
    max-width: 100%;
    height: auto;
    margin-top: 10px;
+   max-height: 1000px;
 }
