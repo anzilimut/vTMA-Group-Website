@@ -8,7 +8,7 @@
 .header{
    min-height: 100vh;
    width: 100%;
-   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(Img/imgHeader.png);
+   background-image: linear-gradient(rgba(31, 34, 45, 0.7), rgba(31, 34, 45, 0.7)), url(Img/imgHeader.png);
    background-position: center;
    background-size: cover;
    position: relative;
@@ -291,9 +291,11 @@ nav {
 }
 
 .six-header {
-   font-size: 16px;
-   font-weight: bold;
-   margin: 3px 0;
+   font-size: 12px;
+   font-weight: 600;
+   margin: 8px 0;
+   letter-spacing: 6px;
+   color: #b7b6b6;
 }
 
 .three-text {
