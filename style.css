@@ -245,8 +245,8 @@ nav {
 .toggle .line3 {
    transform: rotate(45deg) translate(-5px, -6px);
 }
-/*Navbar Underline*/
 
+/*navbar underline*/
 
 .navbar-underline {
    height: 2px;
@@ -266,10 +266,10 @@ nav {
    }
 }
 
+
 #navbar.scrolled + .navbar-underline {
    transform: scaleX(1);
 }
-
 
 /*Main Body*/
 
