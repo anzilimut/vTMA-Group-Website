@@ -409,3 +409,18 @@ img {
    }
 }
 
+/*Partners*/
+
+.partner-container {
+   border-top: 2px solid #ed1c24;
+}
+
+.partners-img {
+   width: 200px;
+   height: auto;
+   margin-bottom: 50px;
+}
+
+.skyLane-partner {
+   margin-left: 45%;
+}
