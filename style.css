@@ -413,6 +413,9 @@ img {
 
 .partner-container {
    border-top: 2px solid #ed1c24;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .partners-img {
@@ -422,5 +425,7 @@ img {
 }
 
 .skyLane-partner {
-   margin-left: 45%;
+   margin: 0;
+   margin-top: 20px;
+   margin-bottom: 30px;
 }
