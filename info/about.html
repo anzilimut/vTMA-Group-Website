@@ -45,6 +45,11 @@
 <!-- Main Body -->
 
 <div class="main-body-cont">
+    <div class="text-left">
+        <h5 class="small-h">
+            Test
+        </h5>
+    </div>
     <div class="img-right">
         <img src="/Img/ABP1.png" class="ABP1">
     </div>
@@ -94,21 +99,6 @@
 }
 
 navSlide();
-
-// Navbar Scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    const navbarUnderline = document.querySelector('.navbar-underline');
-
-    if (window.scrollY > navbar.offsetTop) {
-        navbar.classList.add('scrolled');
-        navbarUnderline.style.transform = 'scaleX(1)';
-    } else {
-        navbar.classList.remove('scrolled');
-        navbarUnderline.style.transform = 'scaleX(0)';
-    }
-});
-
 
 </script>
 
