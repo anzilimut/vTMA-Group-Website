@@ -16,6 +16,18 @@
 </head>
 
 <body>
+
+<!-- Popup Container -->
+<div id="popupContainer">
+    <!-- Popup Content -->
+    <div class="popupContent">
+        <span class="closeButton" onclick="closePopup()">×</span>
+        <h2>Welcome to Our Website!</h2>
+        <p>This is a popup message that automatically opens when you visit the website. Click the button below to close it.</p>
+        <button onclick="closePopup()">Close Popup</button>
+    </div>
+</div>
+
     <section class="header">
         <a class="navbar-brand" href="#">
             <div class="logo-image">
@@ -97,6 +109,23 @@
 
  </body>
 <script>
+
+// PopUP
+
+// Function to open the popup
+function openPopup() {
+    document.getElementById('popupContainer').style.display = 'flex';
+}
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById('popupContainer').style.display = 'none';
+}
+
+// Automatically open the popup when the page is loaded
+window.onload = openPopup;
+
+
   function navSlide() {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-links");
