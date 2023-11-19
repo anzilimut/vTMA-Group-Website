@@ -28,6 +28,10 @@
    text-align: center;
 }
 
+.popupContent h2 {
+   letter-spacing: 4px;
+}
+
 .popupContent p,
 .popupContent h2 {
    color: #fff;
