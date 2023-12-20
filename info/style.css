@@ -299,27 +299,59 @@
 
 .content h2 {
    font-weight: bold;
-   font-size: 50px;
+   font-size: 3rem; /* Adjust as needed using rem units */
    white-space: nowrap;
 }
 
 .content h6 {
-   font-size: 18px;
+   font-size: 1rem; /* Adjust as needed using rem units */
    white-space: nowrap;
-   letter-spacing: 6px;
+   letter-spacing: 0.2em; /* Adjust using em units */
    color: #ed1c24;
-   margin-bottom: -40px;
+   margin-bottom: -2rem; /* Adjust using rem units */
 }
 
 p {
    margin-bottom: 1em;
 }
 
- 
- .text-p {
+.text-p {
    font-size: 19px;
    color: #868e96;
- }
+}
+
+@media screen and (min-width: 768px) {
+   .main-body-cont {
+      flex-direction: row;
+      justify-content: space-between;
+   }
+
+   .content {
+      flex-direction: row;
+   }
+
+   .textp1,
+   .textp2 {
+      max-width: 48%;
+   }
+
+   .content h2,
+   .content h6 {
+      margin-left: 13%;
+   }
+
+   .ABP1 {
+      display: block;
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .ABP1 {
+      display: none;
+   }
+}
+
+
 
  /*Footer*/
  
