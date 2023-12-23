@@ -4,44 +4,6 @@
    text-decoration: none;
 }
 
-/* Popup Container Styles */
-#popupContainer {
-   display: none;
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   background-color: #363635; /* Background color of the container */
-   border-radius: 10px; /* Border radius for rounded corners */
-   padding: 20px;
-   max-width: 600px; /* Adjust the maximum width as needed */
-   text-align: center;
-   z-index: 9999;
-   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Popup Content Styles */
-.popupContent {
-   background-color: #363635;
-   padding: 20px;
-   border-radius: 10px;
-   text-align: center;
-}
-
-.popupContent h2 {
-   letter-spacing: 4px;
-}
-
-.popupContent p,
-.popupContent h2 {
-   color: #fff;
-}
-
-.popupContent a {
-   color: #ed1c24;
-   text-decoration: underline;
-}
-
 /* Close Button Styles */
 .closeButton {
    position: absolute;
