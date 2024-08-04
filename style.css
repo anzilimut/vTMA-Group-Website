@@ -1,45 +1,8 @@
+/* Global styles */
 * {
    font-family: 'Hanken Grotesk', sans-serif;
    box-sizing: border-box;
    text-decoration: none;
-}
-
-/* Popup Container Styles */
-#popupContainer {
-   display: none;
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   background-color: #363635; /* Background color of the container */
-   border-radius: 10px; /* Border radius for rounded corners */
-   padding: 20px;
-   max-width: 600px; /* Adjust the maximum width as needed */
-   text-align: center;
-   z-index: 9999;
-   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Popup Content Styles */
-.popupContent {
-   background-color: #363635;
-   padding: 20px;
-   border-radius: 10px;
-   text-align: center;
-}
-
-.popupContent h2 {
-   letter-spacing: 4px;
-}
-
-.popupContent p,
-.popupContent h2 {
-   color: #fff;
-}
-
-.popupContent a {
-   color: #ed1c24;
-   text-decoration: underline;
 }
 
 /* Close Button Styles */
@@ -55,22 +18,21 @@
 .pp-button {
    display: inline-block;
    padding: 15px 30px;
-   background-color: #ed1c24; /* Rote Hintergrundfarbe */
+   background-color: #ed1c24;
    color: #fff;
    text-decoration: none;
    font-size: 16px;
    border-radius: 5px;
-   transition: background-color 0.3s ease, color 0.3s ease; /* Sanfter Farbübergang bei Hover */
+   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .pp-button:hover {
-   background-color: #c00; /* Leicht dunklere rote Hintergrundfarbe bei Hover */
+   background-color: #c00;
    color: #333;
 }
 
-/*Header*/
-
-.header{
+/* Header */
+.header {
    min-height: 100vh;
    width: 100%;
    background-image: linear-gradient(rgba(31, 34, 45, 0.7), rgba(31, 34, 45, 0.7)), url(Img/imgHeader.png);
@@ -99,8 +61,7 @@
 
 .big-title p {
    margin-top: 0;
- }
- 
+}
 
 .big-title {
    font-size: 46px;
@@ -125,17 +86,19 @@
    color: black;
 }
 
-/*Nav Bar*/
+/* Navbar */
 nav {
    position: fixed;
    top: 0;
-   width: auto;
+   width: 100%;
    display: flex;
-   justify-content: space-around;
+   justify-content: center;
    align-items: center;
    min-height: 8vh;
    background-color: transparent;
    font-family: "Hanken Grotesk", sans-serif;
+   z-index: 1000;
+   transition: background-color 0.3s ease;
 }
 
 .navbar-brand {
@@ -148,7 +111,7 @@ nav {
    color: #fff;
 }
 
-.img-fluid{
+.img-fluid {
    width: 100px;
    height: auto;
    margin-left: 3vh;
@@ -157,17 +120,17 @@ nav {
 
 .nav-links {
    display: flex;
-   justify-content: space-around;
-   width: 10%;
-   flex-direction: row;
+   justify-content: center;
    align-items: center;
+   list-style: none;
+   padding: 0;
+   margin: 0;
 }
 
 .nav-links li {
    list-style: none;
-   margin: 10px 0;
+   margin: 0 15px;
    text-align: center;
-   padding: 10px;
 }
 
 .nav-links a {
@@ -178,28 +141,6 @@ nav {
    font-weight: bold;
    font-size: 16px;
    transition: color 0.3s ease;
-}
-
-.nav-links .live-map {
-   display: flex;
-   justify-content: center;
-}
-
-.nav-links .live-map a {
-   margin: 0 10px;
-}
-
-#navbar {
-   position: fixed;
-   top: 0;
-   width: 100%;
-   transition: background-color 0.3s ease;
-   background-color: transparent;
-   z-index: 1000;
-}
-
-#navbar.scrolled {
-   background-color: #363635;
 }
 
 .nav-links a::before,
@@ -285,7 +226,7 @@ nav {
 }
 
 .nav-active {
-       transform: translateX(0%);
+   transform: translateX(0%);
 }
 
 @keyframes navLinkFade {
@@ -311,8 +252,7 @@ nav {
    transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/*navbar underline*/
-
+/* Navbar underline */
 .navbar-underline {
    height: 2px;
    width: 100%;
@@ -327,17 +267,15 @@ nav {
 
 @media screen and (max-width: 768px) {
    .navbar-underline {
-       top: 7.98vh; /
+       top: 7.98vh;
    }
 }
-
 
 #navbar.scrolled + .navbar-underline {
    transform: scaleX(1);
 }
 
-/*Main Body*/
-
+/* Main Body */
 .mab-body {
    width: 100%;
    display: flex;
@@ -392,12 +330,11 @@ nav {
 
 @media screen and (max-width: 1200px) {
    .text-box {
-      width: 100%;
+       width: 100%;
    }
 }
 
-/*Footer*/
-
+/* Footer */
 .site-footer {
    background-color: #333;
    color: #fff;
@@ -450,7 +387,6 @@ nav {
    font-size: 26px;
 }
 
-
 @media (max-width: 600px) {
    .site-footer {
        flex-direction: column;
@@ -475,8 +411,7 @@ nav {
    }
 }
 
-/*Partners*/
-
+/* Partners */
 .partner-container {
    border-top: 2px solid #ed1c24;
    display: flex;
